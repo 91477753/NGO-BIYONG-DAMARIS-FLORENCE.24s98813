@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Damaris</title>
+ 
+  <style>
+  /* Réinitialisation de base */
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corps du document */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: white; /* Couleur d’arrière-plan */
+}
+
+/* Conteneur principal */
+main {
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 0 0 20px lightgray; /* Ombre douce autour du CV */
+  background-color: white;
+}
+
+/* En-tête du CV */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: gray; /* En-tête en gris foncé */
+  color: white;
+  padding: 20px;
+}
+
+body.light-mode {
+  background: #fff;
+  color: #000;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar ul {
+  display: flex;
+  gap: 20px;
+}
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar ul li {
+  list-style: none;
+}
+.logo {
+  color: purple;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover {
+  color: #f5c518;
+}
+
+
+/* Photo de profil */
+.photo img {
+  border-radius: 50%; /* Image en cercle */
+}
+
+/* Bloc nom + poste */
+.des, .right {
+  margin: 10px;
+}
+
+/* Nom */
+h3 {
+  color: turquoise; /* Couleur accentuée */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Poste */
+.post {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Infos à droite */
+.right p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Icônes dans les contacts */
+.info {
+  width: 20px;
+  height: 20px;
+}
+
+/* Conteneur des deux colonnes */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Colonne gauche */
+.section-left {
+  flex: 1;
+  min-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Colonne droite */
+.section-right {
+  flex: 1;
+  min-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Titres de section */
+h4 {
+  color: turquoise;
+  margin-bottom: 10px;
+}
+
+/* Lignes décoratives */
+hr.light {
+  border-top: 2px solid turquoise;
+  margin-bottom: 15px;
+}
+
+/* Grille des atouts */
+.atouts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Bloc de paragraphes */
+.div {
+  margin-bottom: 20px;
+}
+
+/* Conteneur des compétences et langues */
+.skls {
+  width: 100%;
+}
+
+/* Barre de compétences (fond) */
+.cool {
+  background-color: lightgray;
+  border-radius: 5px;
+  height: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Remplissage des barres de compétences */
+.inner {
+  background-color: turquoise;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Espacement entre les compétences */
+.po {
+  margin-bottom: 15px;
+}
+
+/* Section des intérêts ou réseaux */
+.interet p {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Responsive pour mobile */
+@media screen and (max-width: 768px) {
+  /* Empilement de l'en-tête */
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Les deux colonnes passent en ligne */
+  .container {
+    flex-direction: column;
+  }
+
+  /* Largeur complète sur petit écran */
+  .section-left, .section-right {
+    width: 100%;
+  }
+} 
+ </style>
+</head>
+<body>
+    <header class="navbar">
+    <div class="logo">S N</div>
+    <nav>
+      <ul>
+        <li><a href="../index.html" class="active">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="../portfiolo/porfolio.html">Portfolio</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="theme-toggle" onclick="toggleTheme()">🌓</div>
+  </header>
+  <main>
+    <!-- En-tête du CV contenant la photo, le nom et les infos de contact -->
+    <header class="header">
+      <div class="photo">
+        <!-- Photo de profil -->
+        <img src="damaris.jpg" alt="mon image" width="150" height="150">
+      </div>
+      <div class="des">
+        <!-- Nom et poste -->
+        <h3>NGO BIYONG DAMARIS FLORENCE</h3>
+        <p class="post">ÉTUDIANTE EN INFORMATIQUE</p>
+      </div>
+      <div class="right">
+        <!-- Informations de contact -->
+        <p><img src="images/mail.jpg" class="info">Damarisbiyong@gmail.com</p>
+        <p><img src="images/maps.jpg" class="info"> CAMEROUN</p>
+        <p><img src="images/tel.jpg" class="info"> +237 691477753</p>
+      </div>
+    </header>
+
+    <!-- Conteneur principal du contenu -->
+    <div class="container">
+      <!-- Section de gauche (diplômes, atouts, expériences) -->
+      <section class="section-left">
+        <h4>ATOUTS</h4>
+        <hr class="light">
+        <div class="atouts">
+          <div>Adaptabilité</div>
+          <div>Passion</div><br>
+        </div>
+        
+
+        <h4>DIPLÔMES</h4>
+        <hr class="light">
+        <div class="div">
+          <p><b>Certificat d'études primaires</b> obtenu à Ecole publique Grp3 d'Edea</p>
+          <p>2016-2017</p>
+          <p><b>BEPC</b> au Lycée classique d'Edea</p>
+          <p>2020-2021</p>
+          <p><b>Probatoire et Baccalauréat D </b> au Lycée classique d'Edea</p>
+          <p>2022-2024</p>
+        </div>
+
+        <h4>EXPÉRIENCE PROFESSIONNELLE</h4>
+        <hr class="light">
+        <p><b>Aucune pour le moment. Suis des formations sur le développement web.</b></p>
+      </section>
+
+      <!-- Section de droite (compétences, langues, réseaux, loisirs) -->
+      <section class="section-right">
+        <h4>COMPÉTENCES</h4>
+        <hr class="light">
+        <div class="skls">
+          <div class="po">
+            <p>Programmation C</p>
+            <div class="cool"><div class="inner" style="width:80%"></div></div>
+          </div>
+          <div class="po">
+            <p>Programmation Web</p>
+            <div class="cool"><div class="inner" style="width:50%"></div></div>
+          </div>
+        </div>
+
+        <h4>LANGUES</h4>
+        <hr class="light">
+        <div class="skls">
+          <div class="po">
+            <p>Français</p>
+            <div class="cool"><div class="inner" style="width:90%"></div></div>
+          </div>
+          <div class="po">
+            <p>Anglais</p>
+            <div class="cool"><div class="inner" style="width:60%"></div></div>
+          </div>
+        </div>
+
+        <h4>RÉSEAUX</h4>
+        <hr class="light">
+        <div class="interet">
+          <p><img src="images/3.jpg" class="info"><a href="https://www.facebook.com/lite/damarisbiyong" target="_blank"> cliquez ici pour aller sur ma page facebook</a></p>
+          <p><img src="images/4.jpg" class="info"> LinkedIn</p>
+        </div>
+
+        <h4>CENTRES D'INTÉRÊT</h4>
+        <hr class="light">
+        <div class="interet">
+          <p>Lecture</p>
+          <p>Navigation Internet</p>
+          <p>chant</p>
+          <p>Fabrication de produits de lessive et cuisine</p>
+          <p>Danse</p>
+        </div>
+      </section>0
+    </div>
+  </main>
+</body>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
+</html>

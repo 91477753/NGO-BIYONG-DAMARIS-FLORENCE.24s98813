@@ -1,0 +1,280 @@
+:root {
+  --header-height: 80px; /* Ajuste ici la hauteur réelle de ton header */
+  --marquee-height: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background: #0f0f0f;
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.light-mode {
+  background: #fff;
+  color: #000;
+}
+
+/* Navbar header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: var(--header-height);
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.logo {
+  color: orangered;
+}
+
+.navbar ul li a.active,
+.navbar ul li a:hover {
+  color: #f5c518;
+}
+
+/* Conteneur du marquee sous le header */
+.marquee-container {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: var(--marquee-height);
+  background-color: #444;
+  overflow: hidden;
+  z-index: 999;
+}
+
+/* Texte qui défile */
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  color: #fff;
+  padding-left: 100%;
+  animation: marqueeAnim 10s linear infinite;
+  font-size: 18px;
+  line-height: var(--marquee-height);
+}
+
+@keyframes marqueeAnim {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Pour que le reste de la page ne soit pas caché sous le header + marquee */
+main {
+  margin-top: calc(var(--header-height) + var(--marquee-height));
+  padding: 20px;
+}
+
+/* --- Le reste de ton CSS existant --- */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 50px;
+}
+
+.hero-text h1 span {
+  color: #f5c518;
+}
+
+main h2 {
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 400px;
+  border-radius: 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background: #1c1c1c;
+}
+
+.stat h3 {
+  font-size: 2rem;
+  color: #f5c518;
+}
+
+.socials img {
+  width: 24px;
+  height: 24px;
+}
+
+.hero-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Image circulaire */
+.hero-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #00bcd4;
+  z-index: 2;
+  box-shadow: 0 0 25px rgba(0, 188, 212, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Halo rotatif et coloré */
+.hero-image::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #00bcd4,
+    #ff00ff,
+    #00ffcc,
+    #ffcc00,
+    #00bcd4
+  );
+  animation: rotateHalo 4s linear infinite, colorShift 10s linear infinite;
+  z-index: 1;
+  filter: blur(10px);
+}
+
+/* Animation de rotation */
+@keyframes rotateHalo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Optionnel : pour ajouter un fondu progressif des couleurs */
+@keyframes colorShift {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Formulaire de contact stylé */
+.contact-form {
+  background: #222;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #f60;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #bbb;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  background: #444;
+  box-shadow: 0 0 5px #f60;
+}
+
+.contact-form .btn {
+  width: 100%;
+  padding: 1rem;
+  background: #f60;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.contact-form .btn:hover {
+  background: #ff8533;
+  transform: scale(1.05);
+}
+
+span {
+  color: red;
+  font-size: 25px;
+}
+
+/* FOOTER */
+footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  bottom: 0;
+  color: white;
+  position: fixed;
+}

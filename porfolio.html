@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio de réalisations des produits personnelles </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: antiquewhite;
+}
+
+body.light-mode {
+  background: #FFFFFF;
+  color: #000000;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.tete {
+  background-color: indigo;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+body.light-mode {
+  background: #fff;
+  color: #000;
+}
+body.light-mode .projet {
+  background-color: #f5f5f5;
+  color: black;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar ul {
+  display: flex;
+  gap: 13px;
+}
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar ul li {
+  list-style: none;
+}
+.logo {
+  color: black;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover {
+  color: blanchedalmond;
+}
+
+
+
+.projet {
+  background-color: rosybrown;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.projet img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Mode sombre : texte blanc dans les projets */
+
+
+body:not(.light-mode) #projets {
+  color: white;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  clear: both;
+}
+</style>
+</head>
+<body>
+    <header class="navbar">
+    <div class="logo">S N</div>
+    <nav>
+      <ul>
+        <li><a href="../index.html" class="active">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../cv/cv.html">CV</a></li>
+        <li><a href="porfolio.html">Portfolio</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="theme-toggle" onclick="toggleTheme()">🌓</div>
+  </header>
+  <div class="tete">
+    <h1>Portfolio de réalisations des produits personnelles </h1>
+    <p>Découvrez mes projets et réalisations personnelles</p>
+  </div>
+  <section id="projets">
+    <h2>Mes projets</h2>
+    <div class="projet">
+      <h3>Fabrication du savon en liquide</h3>
+      <p>La fabrication du savon en liquide neccesite des ingrédients de base </p>
+      <img src="savon.jpg" alt="savon">
+      <p>Ingrédients : huile végétale, hydroxyde de sodium,eau, parfum, colorant(facultatif </p>
+      <p>Équipements : un grand pot en plastique, un thermomètre,un moule pour le savon, etc.</p>
+      <p> procédé : préparation de l'hydroxyde de sodium, préparation de l'huile, mélange des deux composés, saponification,ajout de l'eau,melange et refroidissement, ajout de parfum, coloration,mise en bouteille</p>
+    </div>
+    <div class="projet">
+      <h3>Fabrication de la mayonnaise</h3>
+      <plz mayonnaise est fabriqué à partir d'une recette simple</p>
+      <img src="mayonnaise.jpg" alt="mayonnaise">
+      <p>Ingrédients : vinaigre, oeufs,huile, sel</p>
+      <p>équipements : bol et fouet ou mixeur</p>
+      <p> processus : préparation des jaunes d'œufs, ajout de l'huile, continuer à fouetter jusqu'à ce que la mayonnaise commence à epaisir et à prendre une forme crémeuse, ajout du vinaigre et mélanger</p>
+        <p>conseils : utiliser les oeufs frais et de bonnes qualités, ne pas verser trop d'huile</p>
+    </div>
+  </section>
+  <footer>
+    <p>Contactez-moi pour en savoir plus sur mes projets et réalisations</p>
+    <a href="https://www.facebook.com/lite/damaris biyong">ici </a>
+  </footer>
+</body>
+    <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
+</html>

@@ -1,0 +1,88 @@
+/* Définir la police générale du site */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style du formulaire */
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    padding: 20px;
+    width: 50%;
+}
+
+/* Style des titres */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Style des labels */
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Style des champs de texte */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Changer la couleur des champs au survol */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Style pour les boutons radio */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Style du bouton d'envoi */input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Changer la couleur du bouton au survol */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Ajouter une petite bordure pour le texte de message */
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+/* Responsivité : si l'écran est plus petit */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+}
